@@ -16,7 +16,7 @@ public class Appearance {
     }
 
     /* Function to change color of status bar */
-    private void modify_status_bar(int color){
+    public void modify_status_bar(int color){
         Window window = activity.getWindow();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
