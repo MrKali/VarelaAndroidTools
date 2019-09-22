@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.util.Log;
+import android.widget.Toast;
 
 public class Network {
 
@@ -37,5 +38,9 @@ public class Network {
                 return false;
             }
         }
+    }
+
+    static public void test(Context context){
+        Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
     }
 }
