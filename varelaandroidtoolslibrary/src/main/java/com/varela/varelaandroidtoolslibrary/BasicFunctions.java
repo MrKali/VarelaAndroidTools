@@ -1,6 +1,6 @@
 package com.varela.varelaandroidtoolslibrary;
 
-public interface BasicFunctions {
+interface BasicFunctions {
     void findVisualElements();
 
     void startPublicVariables();
