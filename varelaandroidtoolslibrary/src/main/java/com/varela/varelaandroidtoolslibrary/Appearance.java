@@ -14,7 +14,7 @@ public class Appearance {
     public Appearance(Activity activity){
         this.activity = activity;
     }
-    
+
     /* Function to change color of status bar */
     public void modifyStatusBarColor(int color){
         Window window = activity.getWindow();
