@@ -14,7 +14,7 @@ public class Network {
     }
 
     /* Function to check if network is available */
-    private boolean isConnectedToNetwork(){
+    public boolean isConnectedToNetwork(){
         ConnectivityManager connectivityManager
                 =  (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
