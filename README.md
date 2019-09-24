@@ -68,6 +68,54 @@ if (network.isConnectedToNetwork()){
   Toast.makeText(context, "Isn't connected to network", Toast.LENGTH_SHORT).show();
 }
 ```
+## Code sctructure
+In order to keep the organization of the code, there is some methods to do it
+
+### Basic functions
+Always when is created a new activity or fragment, there are some methods that are always required. So i can easily override and create this methods implementing the BasicFunctions:
+
+```
+public class LoginActivity extends AppCompatActivity implements BasicFunctions {
+    
+    private Button loginButton
+    private ArrayList<String> arrayListNames;
+    
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+
+	// call the methods
+        findVisualElements();
+        startPublicVariables();
+        onClickListener();
+    }
+
+    @Override
+    public void findVisualElements() {
+	// find the elements of layout by id
+	loginButton = findViewById(R.id.login_button);
+	
+    }
+
+    @Override
+    public void startPublicVariables() {
+    	// start all public variables
+        arrayListNames = new ArrayList();
+    }
+
+    @Override
+    public void onClickListener() {
+	// handle the click of buttons
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login();
+            }
+        });
+    }
+}
+```
 
 ## Todos
 
